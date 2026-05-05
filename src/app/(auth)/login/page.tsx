@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { LoginForm } from "./login-form";
 import {
   Card,
@@ -20,7 +21,9 @@ export default function LoginPage() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <LoginForm />
+        <Suspense fallback={<div className="h-40" />}>
+          <LoginForm />
+        </Suspense>
         <p className="text-center text-xs text-[var(--muted-foreground)]">
           Don&apos;t have an account? Contact your workspace admin.
         </p>

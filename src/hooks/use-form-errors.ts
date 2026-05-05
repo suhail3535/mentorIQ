@@ -24,7 +24,10 @@ export function useFormErrors<T>(schema?: ZodSchema<T>) {
         setErrors({});
         return true;
       }
-      const flat = (r.error as ZodError).flatten().fieldErrors;
+      const flat = (r.error as ZodError).flatten().fieldErrors as Record<
+        string,
+        string[] | undefined
+      >;
       const next: FieldErrors = {};
       Object.entries(flat).forEach(([k, v]) => {
         if (v && v.length) next[k] = v[0]!;

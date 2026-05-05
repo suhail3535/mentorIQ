@@ -17,6 +17,7 @@ import { FieldError } from "@/components/ui/field-error";
 import { apiFetch } from "@/lib/fetcher";
 import { formatDate, getInitials } from "@/lib/utils";
 import { useFormErrors } from "@/hooks/use-form-errors";
+import { AIAssistantTrigger } from "@/components/ai/ai-assistant";
 
 const CreateUserSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(80),
@@ -137,10 +138,13 @@ export default function UsersPage() {
         title="Users"
         description="Manage mentors and students across the workspace."
         action={
-          <Button variant="gradient" onClick={() => setOpen(true)}>
-            <UserPlus className="h-4 w-4" />
-            Create user
-          </Button>
+          <div className="flex items-center gap-2">
+            <AIAssistantTrigger />
+            <Button variant="gradient" onClick={() => setOpen(true)}>
+              <UserPlus className="h-4 w-4" />
+              Create user
+            </Button>
+          </div>
         }
       />
 
