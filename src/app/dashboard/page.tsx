@@ -15,6 +15,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { apiFetch } from "@/lib/fetcher";
 import { AIAssistantTrigger } from "@/components/ai/ai-assistant";
+import { DashboardCharts } from "@/components/charts/dashboard-charts";
 
 interface Stats {
   role: "ADMIN" | "MENTOR" | "STUDENT";
@@ -109,6 +110,8 @@ export default function DashboardOverviewPage() {
           </CardContent>
         </Card>
       )}
+
+      {(role === "ADMIN" || role === "MENTOR") && <DashboardCharts />}
 
       <Card>
         <CardContent className="p-6">

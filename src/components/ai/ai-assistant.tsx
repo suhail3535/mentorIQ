@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils";
 const SUGGESTIONS = [
   "Add a mentor named Jane Doe, jane@school.edu",
   "How many students do we have?",
-  "Make Santosh a mentor",
 ];
 
 type Ctx = {

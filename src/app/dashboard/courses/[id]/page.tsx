@@ -14,6 +14,7 @@ import { Select } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { apiFetch } from "@/lib/fetcher";
 import { getInitials } from "@/lib/utils";
+import { CourseCharts } from "@/components/charts/course-charts";
 
 interface UserLite { _id: string; name: string; email: string }
 interface Course {
@@ -118,6 +119,10 @@ export default function CourseDetailPage({
         <Badge variant="primary">{course.code}</Badge>
         <Badge variant="outline">Mentor: {course.mentor?.name ?? "—"}</Badge>
         <Badge variant="outline">{course.students.length} students</Badge>
+      </div>
+
+      <div className="mb-6">
+        <CourseCharts courseId={id} />
       </div>
 
       <Card>
