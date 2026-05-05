@@ -12,7 +12,7 @@ export function SiteFooter() {
             <Brain className="h-3.5 w-3.5" />
           </span>
           <span>
-            © {new Date().getFullYear()} {APP.name}. Built by{" "}
+            © {new Date().getFullYear()} {APP.name}. Developed by{" "}
             <span className="font-medium text-[var(--foreground)]">
               {AUTHOR.name}
             </span>

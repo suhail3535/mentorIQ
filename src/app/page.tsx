@@ -12,6 +12,7 @@ import {
 import { SiteNavbar } from "@/components/site-navbar";
 import { SiteFooter } from "@/components/site-footer";
 import { LandingHeroCTA, LandingFooterCTA } from "@/components/landing-cta";
+import { IrisAssistant } from "@/components/ai/iris-assistant";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { APP } from "@/lib/config";
@@ -234,6 +235,7 @@ export default function Home() {
       </main>
 
       <SiteFooter />
+      <IrisAssistant />
     </>
   );
 }
