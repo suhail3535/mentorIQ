@@ -17,6 +17,8 @@ import { cn } from "@/lib/utils";
 
 const SUGGESTIONS = [
   "Add a mentor named Jane Doe, jane@school.edu",
+  "Create a course called Algebra 101",
+  "Find student from list",
   "How many students do we have?",
 ];
 
@@ -129,7 +131,13 @@ function AIAssistantPanel() {
                 Hi {session?.user?.name?.split(" ")[0]} 👋
               </p>
               <p className="max-w-[260px] text-xs text-[var(--muted-foreground)]">
-                Ask me to add, update, or remove users — or create courses.
+                I can help you add students and mentors.
+                <br />
+                I can help you add courses.
+                <br />
+                I can find any student and total students.
+                <br />
+                I can help you update and delete students and mentors.
               </p>
             </div>
             <div className="flex w-full flex-col gap-2 pt-2">

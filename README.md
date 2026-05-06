@@ -63,14 +63,23 @@ It does this by combining four ideas:
 
 🔗 **Live:** https://&lt;your-vercel-url&gt;.vercel.app
 
-| Landing page | Admin dashboard |
-|---|---|
-| _add screenshot_ | _add screenshot_ |
-| **Iris (public AI helper)** | **Mentor (admin co-pilot)** |
-| _add screenshot_ | _add screenshot_ |
+Preview images live in [`docs/readme/`](docs/readme/).
 
-To capture screenshots, sign in as the bootstrap admin (see
-[Getting started](#getting-started-locally)) and hit each page.
+| Landing (hero) | Admin overview |
+|:---|:---|
+| ![Landing page hero with Iris entry point](docs/readme/01-landing-hero.png) | ![Admin dashboard — stats and charts](docs/readme/02-dashboard-overview.png) |
+| **Iris (public AI helper)** | **Mentor (admin co-pilot)** |
+| ![Landing features — Ask Iris](docs/readme/03-landing-features.png) | ![Users + Mentor answering “How many students?”](docs/readme/04-users-mentor-ai.png) |
+
+### More previews
+
+**Users** — search, role filter, Create user, and the AI assistance launcher:
+
+![Users management table](docs/readme/05-users-management.png)
+
+**Landing** — stack badges, CTA, footer, and Iris:
+
+![Stack, CTA, and footer](docs/readme/06-landing-stack-footer.png)
 
 ---
 
@@ -196,6 +205,8 @@ calls + a final summary in one round-trip.
 | Notifications | **Sonner** | Beautiful, accessible toasts |
 | Icons | **lucide-react** | Consistent, tree-shakeable |
 | Motion | **Framer Motion** | Polish, micro-interactions |
+
+Screenshots of the landing “Built on a modern stack” band and footer (with **Ask Iris**) are in [Live demo & screenshots](#live-demo--screenshots) (`06-landing-stack-footer.png`).
 
 ---
 
@@ -360,6 +371,20 @@ Visit `/register` **once** — the very first user who registers becomes
 the workspace Admin. After that, registration is closed and all new
 accounts must be created from `/dashboard/users` (or via the Mentor
 AI assistant).
+
+### 6. Login (shared demo admin)
+
+Use these at `/login` when this admin account already exists in your
+database (e.g. after deployment or a team seed):
+
+| | |
+| --- | --- |
+| **Email** | `adminhouse@gmail.com` |
+| **Password** | `xc13wj7DFTR8!1` |
+
+> **Security:** Credentials in a README are visible to everyone with access
+> to this repo. **Rotate this password** if the repo is or becomes public,
+> and prefer separate accounts for each person where possible.
 
 ---
 
