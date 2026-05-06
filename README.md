@@ -400,7 +400,6 @@ database (e.g. after deployment or a team seed):
 | `NEXT_PUBLIC_APP_NAME` | optional | `MentorIQ` | Branding |
 | `NEXT_PUBLIC_APP_URL` | optional | `http://localhost:3000` | Used in some metadata |
 
-`.env.local` is git-ignored. **Never commit secrets.**
 
 ---
 
