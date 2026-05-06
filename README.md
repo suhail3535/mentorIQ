@@ -59,9 +59,8 @@ It does this by combining four ideas:
 
 ## Live demo & screenshots
 
-> Replace `<your-vercel-url>` with the actual URL after deployment.
 
-🔗 **Live:** https://&lt;your-vercel-url&gt;.vercel.app
+🔗 **Live:** https://hoet-mentoriq-suhail.vercel.app/
 
 Preview images live in [`docs/readme/`](docs/readme/).
 
