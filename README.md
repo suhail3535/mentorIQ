@@ -59,8 +59,9 @@ It does this by combining four ideas:
 
 ## Live demo & screenshots
 
+> Replace `<your-vercel-url>` with the actual URL after deployment.
 
-🔗 **Live:** https://hoet-mentoriq-suhail.vercel.app/
+🔗 **Live:** https://&lt;your-vercel-url&gt;.vercel.app
 
 Preview images live in [`docs/readme/`](docs/readme/).
 
@@ -225,15 +226,15 @@ graph TB
   end
 
   subgraph Next.js Server
-    AuthAPI[/api/auth]
-    UsersAPI[/api/users]
-    CoursesAPI[/api/courses]
-    AssAPI[/api/assessments]
-    IntAPI[/api/interventions]
-    InqAPI[/api/inquiries]
-    StatsAPI[/api/stats]
-    AgentAPI[/api/ai/agent]
-    IrisAPI[/api/ai/iris]
+    AuthAPI["/api/auth"]
+    UsersAPI["/api/users"]
+    CoursesAPI["/api/courses"]
+    AssAPI["/api/assessments"]
+    IntAPI["/api/interventions"]
+    InqAPI["/api/inquiries"]
+    StatsAPI["/api/stats"]
+    AgentAPI["/api/ai/agent"]
+    IrisAPI["/api/ai/iris"]
   end
 
   subgraph External
@@ -338,7 +339,7 @@ MentorIQ/
 ### 2. Clone & install
 
 ```bash
-https://github.com/suhail3535/mentorIQ.git
+git clone https://github.com/<your-username>/MentorIQ.git
 cd MentorIQ
 npm install
 ```
@@ -346,7 +347,7 @@ npm install
 ### 3. Configure environment
 
 ```bash
- .env
+cp .env.example .env.local
 ```
 
 Then edit `.env.local` with your real values — see
@@ -400,6 +401,7 @@ database (e.g. after deployment or a team seed):
 | `NEXT_PUBLIC_APP_NAME` | optional | `MentorIQ` | Branding |
 | `NEXT_PUBLIC_APP_URL` | optional | `http://localhost:3000` | Used in some metadata |
 
+`.env.local` is git-ignored. **Never commit secrets.**
 
 ---
 
