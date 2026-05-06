@@ -338,7 +338,7 @@ MentorIQ/
 ### 2. Clone & install
 
 ```bash
-git clone https://github.com/<your-username>/MentorIQ.git
+https://github.com/suhail3535/mentorIQ.git
 cd MentorIQ
 npm install
 ```
@@ -346,7 +346,7 @@ npm install
 ### 3. Configure environment
 
 ```bash
-cp .env.example .env.local
+ .env
 ```
 
 Then edit `.env.local` with your real values — see
