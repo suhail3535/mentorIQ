@@ -214,9 +214,13 @@ function AIAssistantPanel() {
  * Renders nothing for non-admins.
  */
 export function AIAssistantTrigger({
+  buttonText = "AI bot",
   label = "Try AI Assistance",
   className,
 }: {
+  /** Visible label next to the icon */
+  buttonText?: string;
+  /** Accessible name and hover tooltip */
   label?: string;
   className?: string;
 }) {
@@ -230,11 +234,14 @@ export function AIAssistantTrigger({
         onClick={() => setOpen(!open)}
         aria-label={label}
         className={cn(
-          "relative inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-fuchsia-500 text-white shadow-md transition-all hover:scale-105 hover:shadow-lg",
+          "relative inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-fuchsia-500 px-3 text-white shadow-md transition-all hover:scale-105 hover:shadow-lg",
           className,
         )}
       >
-        <Sparkles className="h-4 w-4" />
+        <Sparkles className="h-4 w-4 shrink-0" />
+        <span className="text-xs font-semibold tracking-tight whitespace-nowrap">
+          {buttonText}
+        </span>
         <span className="absolute -right-0.5 -top-0.5 flex h-2.5 w-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-fuchsia-400 opacity-75" />
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-fuchsia-500" />
